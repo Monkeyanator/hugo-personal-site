@@ -1,5 +1,5 @@
 title = "all code is propaganda"
-baseURL = "https://samnaser.com/"
+baseURL = "https://samnaser.com"
 theme = "zaftra"
 defaultContentLanguage = "en"
 languageCode = "en-us"

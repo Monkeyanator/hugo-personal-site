@@ -1,7 +1,7 @@
 <head>
     <title> {{ .Title }} </title>
     {{ $sass := resources.Get "sass/main.scss" }}
-    {{ $style := $sass | resources.ToCSS }}
+    {{ $style := $sass | resources.ToCSS | minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
     <!-- Syntax highlighting !-->
     <link href="/css/syntax.css" rel="stylesheet">
