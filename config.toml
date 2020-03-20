@@ -1,0 +1,14 @@
+title = "all code is propaganda"
+baseURL = "https://samnaser.com/"
+theme = "zaftra"
+defaultContentLanguage = "en"
+languageCode = "en-us"
+enableEmoji = true
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+[params]
+    twitter = "https://twitter.com/Monkeyanator"
+    github = "https://github.com/Monkeyanator"
+    keybase = "https://keybase.io/snaser"
+    linkedin = "https://linkedin.com/in/samuel-naser/"

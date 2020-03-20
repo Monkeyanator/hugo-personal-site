@@ -1,0 +1,83 @@
+$theme-font: 'VT323';
+$content-font: 'Source Sans Pro', sans-serif;
+$accent-color: #e02020;
+$highlight-accent-color: #e00000;
+
+/*
+Root element styling
+*/
+img {
+    max-width: 100%; // limit width from parent block 
+}
+
+/*
+Custom classes
+*/
+
+#content, #header, #footer {
+    margin: 0 auto; 
+    width: 60%;
+}
+
+#content {
+    a {
+        color: inherit;
+        text-decoration-color: $accent-color;
+    }
+
+    a:hover {
+        color: $highlight-accent-color;
+    }
+}
+
+.index-post-listing {
+    font-family: $theme-font;
+}
+
+.index-post-date {
+    padding-right: 0.5ch;
+    font-weight: lighter;
+}
+
+
+#header {
+    a {
+        text-decoration: inherit;
+        color: inherit;
+    }
+
+    h1 {
+        font-family: $theme-font;
+        font-weight: bold;
+        background-color: $accent-color;
+        padding: 5px;
+    }
+}
+
+.separator-accent {
+    color: $accent-color;
+    padding-left: 0.4ch;
+    padding-right: 0.4ch;
+}
+
+.links {
+    font-family: $theme-font;
+}
+
+/*
+Post-specific styles
+*/ 
+#post {
+}
+
+.post-header {
+    font-family: $theme-font;
+}
+
+.post-content {
+    font-family: $content-font;
+}
+
+.post-date {
+    font-weight: lighter;
+}

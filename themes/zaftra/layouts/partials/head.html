@@ -1,0 +1,10 @@
+<head>
+    <title> {{ .Title }} </title>
+    {{ $sass := resources.Get "sass/main.scss" }}
+    {{ $style := $sass | resources.ToCSS }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+    <!-- Syntax highlighting !-->
+    <link href="/css/syntax.css" rel="stylesheet">
+    <!-- Fonts !-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Pacifico|Quicksand|VT323&display=swap"> 
+</head>

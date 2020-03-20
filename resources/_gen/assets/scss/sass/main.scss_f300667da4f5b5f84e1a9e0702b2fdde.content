@@ -1,0 +1,56 @@
+/*
+Root element styling
+*/
+img {
+  max-width: 100%; }
+
+/*
+Custom classes
+*/
+#content, #header, #footer {
+  margin: 0 auto;
+  width: 60%; }
+
+#content a {
+  color: inherit;
+  text-decoration-color: #e02020; }
+
+#content a:hover {
+  color: #e00000; }
+
+.index-post-listing {
+  font-family: "VT323"; }
+
+.index-post-date {
+  padding-right: 0.5ch;
+  font-weight: lighter; }
+
+#header a {
+  text-decoration: inherit;
+  color: inherit; }
+
+#header h1 {
+  font-family: "VT323";
+  font-weight: bold;
+  background-color: #e02020;
+  padding: 5px; }
+
+.separator-accent {
+  color: #e02020;
+  padding-left: 0.4ch;
+  padding-right: 0.4ch; }
+
+.links {
+  font-family: "VT323"; }
+
+/*
+Post-specific styles
+*/
+.post-header {
+  font-family: "VT323"; }
+
+.post-content {
+  font-family: "Source Sans Pro", sans-serif; }
+
+.post-date {
+  font-weight: lighter; }

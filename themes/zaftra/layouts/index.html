@@ -1,0 +1,11 @@
+{{ define "main" }}
+    {{- partial "links.html" . -}}
+    {{ range first 10 .Data.Pages }}
+        {{ if eq .Type "post" }}
+            <h2 class="index-post-listing">
+                <span class="index-post-date">{{ .PublishDate.Format "2006-01-02" }}</span>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+        {{ end }}
+    {{ end }}
+{{ end }}
