@@ -28,6 +28,13 @@ Custom classes
     width: 55%;
 }
 
+@media only screen and (max-width: 600px) {
+  #content, #header, #footer {
+      width: 90%;
+  }
+
+}
+
 #content {
     a {
         color: inherit;
