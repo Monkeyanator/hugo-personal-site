@@ -1,11 +1,11 @@
 ---
-layout: page
+type: about 
 title: About me 
+cover_image: /images/me_plus_olive.jpg 
 ---
 
-![Me](/images/sunset.jpg) 
-
 My name is Sam and I like working on hard problems. Computers pose some interesting ones and solve a few others, but really, there are hard problems everywhere.
+
 
 I worked at Google as a Software Engineering Intern a couple of times, once on [Kubernetes](https://kubernetes.io/), where I [made this](https://github.com/kubernetes-sigs/mutating-trace-admission-controller) and [wrote this](https://github.com/kubernetes/enhancements/pull/650), and then on [Istio](https://istio.io), where [I did](https://github.com/istio/istio/pull/15503) [some](https://github.com/istio/istio/pull/15941) [useful](https://github.com/istio/istio/pull/15418) [stuff](https://github.com/istio/istio/pull/15297). I also worked as an intern on trading technologies at [Belvedere Trading](http://www.belvederetrading.com/) and ad tech at [Amino Payments](https://www.aminopay.com/).
 
