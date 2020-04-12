@@ -56,6 +56,6 @@ Eventually I arrived at some _really_ immature ideas about what it might look li
 
 The operations could be tracked end-to-end across the `api-server`, `scheduler`, `kubelet`, and even into the container runtime. The results ended up pretty cool, and the demos definitely got some stakeholders ooh'ing and ahhh'ing, but it takes more than gimmicky demos to get an architectural feature merged into a project like Kubernetes. 
 
-I won't go further into the technical details on the work I did on adding distributed tracing to Kubernetes for now. First off, it's a work in progress, and almost two years after the internship, [the details are still being discussed](https://github.com/kubernetes/enhancements/pull/1458). And if it wasn't obvious by now, the details are the hardest part on a task like this. Second off, the discussion warrants its own blog post to touch on the finer points (which, again, are the interesting parts. 
+I won't go further into the technical details on the work I did on adding distributed tracing to Kubernetes for now. First off, it's a work in progress, and almost two years after the internship, [the details are still being discussed](https://github.com/kubernetes/enhancements/pull/1458). And if it wasn't obvious by now, the details are the hardest part on a task like this. Second off, the discussion warrants its own blog post to touch on the finer points (which, again, are the interesting parts). 
 
 I'll leave this by saying how grateful I am to David Ashpole for his patient guidance and how proud I am of what we got done that fall.
