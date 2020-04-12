@@ -46,16 +46,13 @@ Another interesting thing (that should have been obvious in retrospect): going i
 
 ### Contributing 
 
-And then, the task I was given terrified me. I was supposed to add distributed tracing (one complex thing I had no experience with) to Kubernetes (another such thing). This task was different in nature than, say, writing a new CSI driver, or fixing a scheduler bug. There's no single codepath to understand and fix- the goal was to make the whole system more understandable, to decompose a cross-component k8s operation into discrete units of work, and then export those discrete units into tracing backends. Even just defining the term "operation" in the Kubernetes context is harder than you might think.
+And then, the task I was given terrified me. I was supposed to add distributed tracing (one complex thing I had no experience with) to Kubernetes (another such thing). This task was different in nature than, say, writing a new CSI driver, or fixing a scheduler bug. There's no single codepath to understand and fix- the goal was to make the whole system more understandable, to decompose a distributed k8s operation into discrete units of work and export those discrete units into tracing backends. Even just defining the term "operation" in the Kubernetes context is harder than you might think.
 
-So, having never touched Kubernetes before coming into this internship, I was suddenly expected to design a _huge_ feature for it. There were moments where I was shocked at the confidence my host must have had in me to believe I could even attempt a pass at this. There were moments were I was grateful to be working on such an impactful project. And then there were moments where I was just plain scared, a ghoul behind the keyboard.
-
-Eventually I arrived at some _really_ immature ideas about what it might look like to trace an operation like Pod startup.
-
+So, having never touched Kubernetes before coming into this internship, I was suddenly expected to design a _huge_ feature for it. There were moments when I was shocked that my hosted believed I could pull this off. There were moments when I was grateful to be working on such an impactful project. And then there were moments when I was just plain scared.
 ![Early trace concept](/images/trace_concept.jpg)
 
-The operations could be tracked end-to-end across the `api-server`, `scheduler`, `kubelet`, and even into the container runtime. The results ended up pretty cool, and the demos definitely got some stakeholders ooh'ing and ahhh'ing, but it takes more than gimmicky demos to get an architectural feature merged into a project like Kubernetes. 
+The operations could be tracked end-to-end across the `api-server`, `scheduler`, `kubelet`, and even into the container runtime. The result ended up pretty cool, and the demos definitely got some stakeholders ooh'ing and ahhh'ing, but it takes more than flashy demos to get an architectural feature merged into a project like Kubernetes. 
 
-I won't go further into the technical details on the work I did on adding distributed tracing to Kubernetes for now. First off, it's a work in progress, and almost two years after the internship, [the details are still being discussed](https://github.com/kubernetes/enhancements/pull/1458). And if it wasn't obvious by now, the details are the hardest part on a task like this. Second off, the discussion warrants its own blog post to touch on the finer points (which, again, are the interesting parts). 
+I won't go further into the technical details on the work I did on adding distributed tracing to Kubernetes for now. First off, it's a work in progress, and almost two years after the internship, [it's still under active development](https://github.com/kubernetes/enhancements/pull/1458). Second off, the discussion warrants its own blog post to touch on the finer points, which are the most interesting points. 
 
 I'll leave this by saying how grateful I am to David Ashpole for his patient guidance and how proud I am of what we got done that fall.
