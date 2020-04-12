@@ -1,5 +1,28 @@
-<header>
-    <div id="header">
-        <h1><a href="{{ .Site.BaseURL }}"> {{ .Site.Title }} </a></h1>
-    </div>
-</header>
+<h3 id="header">
+    <!-- Link to homepage !--> 
+    <span class="separator-accent">[</span>
+        <a href="{{ .Site.BaseURL }}"> home </a>
+    <span class="separator-accent">]</span>
+
+    <!-- Link to about page !-->
+    <span class="separator-accent">[</span>
+        <a href="/about"> about me </a>
+    <span class="separator-accent">]</span>
+
+    <!-- Link to social accounts !-->
+    <span class="separator-accent">[</span>
+    {{ if .Site.Params.Twitter }}
+    <a href="{{ .Site.Params.Twitter }}"> twitter </a>
+        <span class="separator-accent">/</span>
+    {{ end }}
+    {{ if .Site.Params.Github }}
+    <a href="{{ .Site.Params.Github }}"> github </a>
+        <span class="separator-accent">/</span>
+    {{ end }} 
+    <a href="{{ .Site.Params.Keybase }}"> keybase </a>
+        <span class="separator-accent">/</span>
+    {{ if .Site.Params.Linkedin }}
+        <a href="{{ .Site.Params.Linkedin }}"> linkedin </a>
+    {{ end }}
+    <span class="separator-accent">]</span>
+</h3>

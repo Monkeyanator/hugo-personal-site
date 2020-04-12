@@ -1,5 +1,5 @@
-$theme-font: 'VT323';
-$content-font: 'Source Sans Pro', sans-serif;
+$theme-font:  'Lora', serif;
+$content-font:  'Lora', serif;
 $accent-color: #e02020;
 $highlight-accent-color: #e00000;
 
@@ -7,7 +7,8 @@ $highlight-accent-color: #e00000;
 Root element styling
 */
 img {
-    max-width: 100%; // limit width from parent block 
+    max-width: 75%; // limit width from parent block 
+    padding-right: 10px;
 }
 
 blockquote {
@@ -24,7 +25,7 @@ Custom classes
 
 #content, #header, #footer {
     margin: 0 auto; 
-    width: 60%;
+    width: 55%;
 }
 
 #content {
@@ -36,10 +37,12 @@ Custom classes
     a:hover {
         color: $highlight-accent-color;
     }
+
 }
 
 .index-post-listing {
     font-family: $theme-font;
+    font-weight: lighter;
 }
 
 .index-post-date {
@@ -53,13 +56,10 @@ Custom classes
         text-decoration: inherit;
         color: inherit;
     }
-
-    h1 {
-        font-family: $theme-font;
-        font-weight: bold;
-        background-color: $accent-color;
-        padding: 5px;
-    }
+    
+    font-family: $theme-font;
+    padding: 5px;
+    padding-bottom: 10px;
 }
 
 .separator-accent {
@@ -68,9 +68,6 @@ Custom classes
     padding-right: 0.4ch;
 }
 
-.links {
-    font-family: $theme-font;
-}
 
 /*
 Post-specific styles
@@ -84,8 +81,24 @@ Post-specific styles
 
 .post-content {
     font-family: $content-font;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 .post-date {
     font-weight: lighter;
+}
+
+
+/*
+About-me specific styles
+*/
+#about-content {
+    font-size: 16px;
+    font-family: $theme-font;
+}
+
+#about-cover-image {
+    width: 50%;
+    float: left;
 }
