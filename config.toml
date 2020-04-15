@@ -8,6 +8,7 @@ pygmentsUseClasses = true
 pygmentsCodefences = true
 
 [params]
+    resume = "/documents/samuel_naser_resume.pdf"
     twitter = "https://twitter.com/Monkeyanator"
     github = "https://github.com/Monkeyanator"
     keybase = "https://keybase.io/snaser"
