@@ -1,11 +1,17 @@
 $theme-font:  'Lora', serif;
 $content-font:  'Lora', serif;
-$accent-color: #e02020;
-$highlight-accent-color: #e00000;
+$background-color: #222831;
+$accent-color: #f2a365;
+$highlight-accent-color: #f2a365;
+$text-color: #d3d4d4;
 
 /*
 Root element styling
 */
+html {
+    background-color: $background-color;
+}
+
 img {
     max-width: 75%; // limit width from parent block 
     padding-right: 10px;
@@ -13,7 +19,7 @@ img {
 
 blockquote {
     // credit: https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
-    background: #f9f9f9;
+    background: #363A40;
     border-left: 4px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
@@ -26,6 +32,7 @@ Custom classes
 #content, #header, #footer {
     margin: 0 auto; 
     width: 50%;
+    color: $text-color;
 }
 
 @media only screen and (max-width: 600px) {
