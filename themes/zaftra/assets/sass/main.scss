@@ -1,9 +1,12 @@
 $theme-font:  'Lora', serif;
 $content-font:  'Lora', serif;
+
 $background-color: #222831;
 $accent-color: #f2a365;
 $highlight-accent-color: #f2a365;
 $text-color: #d3d4d4;
+
+$content-font-size: 16px;
 
 /*
 Root element styling
@@ -96,7 +99,7 @@ Post-specific styles
 
 .post-content {
     font-family: $content-font;
-    font-size: 18px;
+    font-size: $content-font-size;
     line-height: 1.7;
 }
 
