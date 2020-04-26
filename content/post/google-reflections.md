@@ -46,13 +46,30 @@ Another interesting thing (that should have been obvious in retrospect): going i
 
 ### Contributing 
 
-And then, the task I was given terrified me. I was supposed to add distributed tracing (one complex thing I had no experience with) to Kubernetes (another such thing). This task was different in nature than, say, writing a new CSI driver, or fixing a scheduler bug. There's no single codepath to understand and fix- the goal was to make the whole system more understandable, to decompose a distributed k8s operation into discrete units of work and export those discrete units into tracing backends. Even just defining the term "operation" in the Kubernetes context is harder than you might think.
+My task was to add distributed tracing to Kubernetes. This was different in nature than, say, writing a new CSI driver, or fixing a scheduler bug. The task was an architectural change. There's no single codepath to understand and fix- the goal was to make the whole system more understandable, to decompose a distributed operation into something that could be broken down and visualized. Even just defining the term "operation" in the Kubernetes context is harder than you might think. 
 
-So, having never touched Kubernetes before coming into this internship, I was suddenly expected to design a _huge_ feature for it. There were moments when I was shocked that my hosted believed I could even attempt this. There were moments when I was grateful to be working on such an impactful project. And then there were moments when I was just plain nervous. Eventually I arrived at some early trace concepts as shown below and managed some basic demos. The concrete fruit of that work was [this project](https://github.com/kubernetes-sigs/mutating-trace-admission-controller), which injects trace context into Kubernetes objects before admission.
+Adding distributed tracing to a system isn't actually so difficult in general. You identify the code paths that contain substantive work and wrap them with span creations and deletions. Work typically triggers other work which leads us to the concept of parent spans and children spans. We end up with a kind of hierarchy of work that ends up represented as a DAG of spans. The code ends up being instrumented with lots of little snippets like below:
+
+```golang
+func check_the_weather(ctx context.Context) {
+    ctx, span := trace.StartSpan(ctx, "check-weather")
+    defer span.End()
+    /*
+        ...
+        ...
+    */
+}
+```
+
+In Kubernetes, however, it's not always so clear what should be held responsible for kicking off an operation. Components watch a state store for changes and react to those changes, but never explicitly tell each other what to do. Tracing also assumes that it's obvious what a complete unit of work looks like from beginning to end (i.e. handling a request from receipt to response, rendering a single frame of a 3D scene), but in Kubernetes, this model breaks down. It's not actually obvious when we want traces to begin and end.
+
+Eventually I arrived at some early trace concepts as shown below and managed some basic demos. The project ended up as mostly high-level design work, culminating in a [Kubernetes Enhancement Proposal](https://github.com/kubernetes/enhancements/pull/650) (KEP) and some implementation for demo purposes. [This project](https://github.com/kubernetes-sigs/mutating-trace-admission-controller), which injects trace context into Kubernetes objects before admission, ended up getting merged into the `kubernetes-sigs` org. There were still some unanswered questions but lots of promise.
 
 ![Early trace concept](/images/trace_concept.jpg)
 
-The operations could be tracked end-to-end across the `api-server`, `scheduler`, `kubelet`, and even into the container runtime. So, we could visualize pod startup latencies in Kubernetes to a degree of detail that had never been achieved before. The result ended up pretty cool, and the demos definitely got some stakeholders ooh'ing and ahhh'ing, but it takes more than flashy demos to get an architectural feature merged into a project like Kubernetes. 
+We could follow pod-startup across the `api-server`, `scheduler`, `kubelet`, and even into the container runtime, with little bars showing how long each step took. We could visualize pod startup latencies in Kubernetes to a degree of detail that had never been achieved before. The demos definitely got some stakeholders ooh'ing and ahhh'ing, but it takes more than flashy demos to get an architectural feature merged into a project like Kubernetes. 
+
+![Distributed trace example](https://user-images.githubusercontent.com/4377348/48081501-0dab8c80-e1a5-11e8-87e5-fdb4af495fed.png)
 
 I won't go further into the technical details on the work I did on adding distributed tracing to Kubernetes for now. First off, it's a work in progress, and almost two years after the internship, [it's still under active development](https://github.com/kubernetes/enhancements/pull/1458). Second off, the discussion warrants its own blog post to touch on the finer points, which are the most interesting points. 
 
