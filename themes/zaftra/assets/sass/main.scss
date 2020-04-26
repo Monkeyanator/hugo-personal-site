@@ -1,5 +1,6 @@
 $theme-font:  'Lora', serif;
 $content-font:  'Lora', serif;
+$index-date-font: 'Monaco,courier new,monospace';
 
 $background-color: #222831;
 $accent-color: #f2a365;
@@ -64,7 +65,7 @@ Custom classes
 
 .index-post-date {
     padding-right: 0.5ch;
-    font-weight: lighter;
+    font-family: $index-date-font;
 }
 
 
@@ -119,4 +120,11 @@ About-me specific styles
 #about-cover-image {
     width: 50%;
     float: left;
+}
+
+/*
+Footer specific styles
+*/
+#footer {
+    text-decoration: underline $accent-color;
 }
