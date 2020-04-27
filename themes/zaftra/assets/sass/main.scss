@@ -57,7 +57,6 @@ Custom classes
     a:hover {
         color: $highlight-accent-color;
     }
-
 }
 
 .index-post-listing {
@@ -74,6 +73,10 @@ Custom classes
     a {
         text-decoration: inherit;
         color: inherit;
+    }
+
+    a:hover {
+        color: $highlight-accent-color;
     }
     
     padding: 5px;
@@ -138,6 +141,10 @@ Project styles
     h2 {
         color: $accent-color;
     }
+
+    p {
+        font-size: 14px;
+    }
     
     span {
         font-size: 18px;
@@ -146,9 +153,5 @@ Project styles
     img {
         width: 100px;
         float: left;
-    }
-
-    p {
-        font-size: 14px;
     }
 }
