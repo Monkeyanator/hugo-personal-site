@@ -7,6 +7,9 @@
     <!-- Link to about page !-->
     <span class="separator-accent">[</span>
         <a href="/about"> about me </a>
+        <span class="separator-accent">/</span>
+        <a href="/project"> projects </a>
+        <span class="separator-accent">/</span>
         <a href="{{ .Site.Params.Resume }}">📝</a>
     <span class="separator-accent">]</span>
 
@@ -19,9 +22,11 @@
     {{ if .Site.Params.Github }}
     <a href="{{ .Site.Params.Github }}"> github </a>
         <span class="separator-accent">/</span>
-    {{ end }} 
+    {{ end }}
+    {{ if .Site.Params.Keybase }}
     <a href="{{ .Site.Params.Keybase }}"> keybase </a>
         <span class="separator-accent">/</span>
+    {{ end }}
     {{ if .Site.Params.Linkedin }}
         <a href="{{ .Site.Params.Linkedin }}"> linkedin </a>
     {{ end }}
