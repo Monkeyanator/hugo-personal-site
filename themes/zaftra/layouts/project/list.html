@@ -1,7 +1,7 @@
 {{ define "main" }}
-    <h1> #open-source </h1>
+    <h1> #contributor </h1>
     {{ range .Data.Pages }}
-        {{ if in .Params.tags "oss" }}
+        {{ if in .Params.tags "contributor" }}
             <div class="project-item">
                     <img src= {{ .Params.Image }}/>
                     <a href={{ .Params.Link }}>
@@ -12,9 +12,9 @@
         {{end }}
     {{ end }}
 
-    <h1> #personal </h1>
+    <h1> #creator </h1>
     {{ range .Data.Pages }}
-        {{ if in .Params.tags "personal" }}
+        {{ if in .Params.tags "creator" }}
             <div class="project-item">
                     <img src= {{ .Params.Image }}/>
                     <a href={{ .Params.Link }}>
