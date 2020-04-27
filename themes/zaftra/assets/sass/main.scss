@@ -3,6 +3,7 @@ $content-font:  'Lora', serif;
 $index-date-font: 'Monaco,courier new,monospace';
 
 $background-color: #222831;
+$secondary-color: #30475e;
 $accent-color: #f2a365;
 $highlight-accent-color: #f2a365;
 $text-color: #d3d4d4;
@@ -14,6 +15,7 @@ Root element styling
 */
 html {
     background-color: $background-color;
+    font-family: $theme-font;
 }
 
 img {
@@ -59,7 +61,6 @@ Custom classes
 }
 
 .index-post-listing {
-    font-family: $theme-font;
     font-weight: lighter;
 }
 
@@ -75,7 +76,6 @@ Custom classes
         color: inherit;
     }
     
-    font-family: $theme-font;
     padding: 5px;
     padding-bottom: 10px;
 }
@@ -114,7 +114,6 @@ About-me specific styles
 */
 #about-content {
     font-size: 16px;
-    font-family: $theme-font;
 }
 
 #about-cover-image {
@@ -127,4 +126,29 @@ Footer specific styles
 */
 #footer {
     text-decoration: underline $accent-color;
+}
+
+/*
+Project styles
+*/
+.project-item {
+    padding-bottom: 15px;
+    overflow-x: auto;
+
+    h2 {
+        color: $accent-color;
+    }
+    
+    span {
+        font-size: 18px;
+    }
+
+    img {
+        width: 100px;
+        float: left;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
