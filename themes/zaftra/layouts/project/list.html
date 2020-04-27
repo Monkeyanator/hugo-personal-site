@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <h1> #open-source </h1>
+    {{ range .Data.Pages }}
+        {{ if in .Params.tags "oss" }}
+            <div class="project-item">
+                    <img src= {{ .Params.Image }}/>
+                    <a href={{ .Params.Link }}>
+                        <span> {{ .Title }} </span>
+                    </a>
+                    <p> {{ .Content }} </p>
+            </div>
+        {{end }}
+    {{ end }}
+
+    <h1> #personal </h1>
+    {{ range .Data.Pages }}
+        {{ if in .Params.tags "personal" }}
+            <div class="project-item">
+                    <img src= {{ .Params.Image }}/>
+                    <a href={{ .Params.Link }}>
+                        <span> {{ .Title }} </span>
+                    </a>
+                    <p> {{ .Content }} </p>
+            </div>
+        {{end }}
+    {{ end }}
+{{ end }}
