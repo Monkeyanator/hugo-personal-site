@@ -137,6 +137,7 @@ Project styles
 .project-item {
     padding-bottom: 15px;
     overflow-x: auto;
+    max-width: 45em;
 
     h2 {
         color: $accent-color;
