@@ -1,7 +1,7 @@
 ---
 layout: post
-title: internship at 20,000 feet 
-date: "2018-12-17"
+title: gcloud internship recap
+date: "2019-01-17"
 ---
 
 ![Sand Dune Run](/images/dune_run.jpg)
