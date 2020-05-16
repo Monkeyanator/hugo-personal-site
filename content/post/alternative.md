@@ -4,7 +4,7 @@ title: a case study in overthinking
 date: "2020-05-11"
 ---
 
-This is a short writeup about what was perhaps the easiest challenge from the [Volga CTF](https://volgactf.ru/en/) 2019 Quals and the winding path to solving it as a beginner.
+This is a short writeup about what was perhaps the easiest challenge from the [Volga CTF](https://volgactf.ru/en/) 2020 Quals and the winding path to solving it as a beginner.
 
 Let me set the stage. COVID-19 shuts down the nation and I realize that I'm about to be spending a lot of time in a small, mostly-empty room with nothing to do. I didn't want to spend my entire spring break playing [Dota](http://blog.dota2.com/?l=english) so I did something I'd been talking about for a while: I messaged some guys and put together a team to compete in virtual [CTFs](https://trailofbits.github.io/ctf/) with (team name: _The Compile Time Terrors_). Soon, we set our sights on Volga CTF. 
 
