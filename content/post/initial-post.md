@@ -4,7 +4,7 @@ title: initial commit please ignore
 date: "2018-07-20"
 ---
 
-![Me](/images/lamppost.jpg)
+![Me](/images/posts/initial_post/lamppost.jpg)
 
 ### Background
 

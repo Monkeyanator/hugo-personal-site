@@ -30,6 +30,6 @@ So, I'm back from dinner, and discouraged that hundreds of teams have solved thi
 
 Then, all at once, it hits me. Alternative... as in _subject alternative name_. The subject alternative name, or [SAN](https://en.wikipedia.org/wiki/Subject_Alternative_Name) is a field on x509 certificates, which I should have really remembered immediately, given that I spent 3 months literally working on a CA. Viewing the SSL certificate for the webpage and checking the SAN field yielded the key immediately.
 
-![CTF Discord Chat](/images/alternative-chat.png)
+![CTF Discord Chat](/images/posts/alternative/alternative-chat.png)
 
 The label `crypto` still seems a bit misleading in hindsight, but eh, fair enough. Is there a lesson to be learned here? Not really. Maybe the value of taking a step back when you're too close to a problem. We ended up finishing top 1/3rd of finishers in VolgaCTF, which was much, much better than I'd expected, and solved just one other problem over the span of the contest.

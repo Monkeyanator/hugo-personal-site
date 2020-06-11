@@ -4,7 +4,7 @@ title: gcloud internship recap
 date: "2019-01-17"
 ---
 
-![Sand Dune Run](/images/dune_run.jpg)
+![Sand Dune Run](/images/posts/google_reflections/dune_run.jpg)
 
 When I joined the Google Kubernetes Engine Node Team this Fall as an intern I didn't know much about Kubernetes. Now, after three months of full time work on its internals, I still wouldn't say I know much about Kubernetes. I figure probably Google was given the source code by aliens around 2012 and open-sourced it a year later (not sure on the exact timeline there).
 
@@ -36,8 +36,8 @@ Besides docs, I found that I learned the fastest from one-on-one code walkthroug
 
 So, over the course of the week I would write things down that confused me in the codebase and schedule a 30-40 minute meeting with an engineer who could tolerate an intern for that long. I kept a painstaking technical log, the contents of which closely traced my mental descent. Littered with illegible scrawls, lines trailing into the margin and off the page, blood from where I'd gnawed my hands in aggravation. The level of detail became so neurotic at some point that I had to scale it back for the sake of productivity. 
 
-![Technical notebook cover](/images/technical-notebook-cover.jpg)
-![Technical notebook sample](/images/technical-notebook-sample.jpg)
+![Technical notebook cover](/images/posts/google_reflections/technical-notebook-cover.jpg)
+![Technical notebook sample](/images/posts/google_reflections/technical-notebook-sample.jpg)
 
 Another interesting thing (that should have been obvious in retrospect): going in, I had the expectation that engineers at a place like Google would have all the answers knocking around in their head. They don't. They're really good at knowing when they're stuck and finding the right person to help them. The best engineers there have no ego about them. Walking up to another engineer with a question is the most natural thing in the world to them. 
 
@@ -65,7 +65,7 @@ In Kubernetes, however, it's not always so clear what should be held responsible
 
 Eventually I arrived at some early trace concepts as shown below and managed some basic demos. The project ended up as mostly high-level design work, culminating in a [Kubernetes Enhancement Proposal](https://github.com/kubernetes/enhancements/pull/650) (KEP) and some implementation for demo purposes. [This project](https://github.com/kubernetes-sigs/mutating-trace-admission-controller), which injects trace context into Kubernetes objects before admission, ended up getting merged into the `kubernetes-sigs` org. There were still some unanswered questions but lots of promise.
 
-![Early trace concept](/images/trace_concept.jpg)
+![Early trace concept](/images/posts/google_reflections/trace_concept.jpg)
 
 We could follow pod-startup across the `api-server`, `scheduler`, `kubelet`, and even into the container runtime, with little bars showing how long each step took. We could visualize pod startup latencies in Kubernetes to a degree of detail that had never been achieved before. The demos definitely got some stakeholders ooh'ing and ahhh'ing, but it takes more than flashy demos to get an architectural feature merged into a project like Kubernetes. 
 
