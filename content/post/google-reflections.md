@@ -50,7 +50,7 @@ My task was to add distributed tracing to Kubernetes. This was different in natu
 
 Adding distributed tracing to a system isn't actually so difficult in general. You identify the code paths that contain substantive work and wrap them with span creations and deletions. Work typically triggers other work which leads us to the concept of parent spans and children spans. We end up with a kind of hierarchy of work that ends up represented as a DAG of spans. The code ends up being instrumented with lots of little snippets like below:
 
-```golang
+{{< highlight go "linenos=table">}}
 func check_the_weather(ctx context.Context) {
     ctx, span := trace.StartSpan(ctx, "check-weather")
     defer span.End()
@@ -59,7 +59,7 @@ func check_the_weather(ctx context.Context) {
         ...
     */
 }
-```
+{{< / highlight >}}
 
 In Kubernetes, however, it's not always so clear what should be held responsible for kicking off an operation. Components watch a state store for changes and react to those changes, but never explicitly tell each other what to do. Tracing also assumes that it's obvious what a complete unit of work looks like from beginning to end (i.e. handling a request from receipt to response, rendering a single frame of a 3D scene), but in Kubernetes, this model breaks down. It's not actually obvious when we want traces to begin and end.
 
