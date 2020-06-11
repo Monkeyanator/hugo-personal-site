@@ -8,4 +8,11 @@
             {{ .Content }}
         </div>
     </div>
+    <hr/>
+    <div id="related-posts">
+        <h1> Recent posts </h1>
+        {{ range ( where site.RegularPages "Section" "post" | first 3 ) }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </div>
 {{ end }}
