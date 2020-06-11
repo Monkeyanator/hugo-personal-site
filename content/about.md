@@ -1,7 +1,7 @@
 ---
 type: about 
 title: About me 
-cover_image: /images/me_plus_olive.jpg 
+cover_image: /images/pages/about/me_plus_olive.jpg 
 ---
 
 My name is Sam and I like working on hard problems. Computers pose some interesting ones and solve a few others, but really, there are hard problems everywhere.
