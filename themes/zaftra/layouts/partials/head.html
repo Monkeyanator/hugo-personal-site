@@ -8,13 +8,14 @@
         gtag('config', 'UA-122713044-1');
     </script>
     <title> {{ .Title }} </title>
+    <!-- Compile SCSS and include !-->
     {{ $sass := resources.Get "sass/main.scss" }}
     {{ $style := $sass | resources.ToCSS | minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
-    <!-- Mobile-friendly stuff that I don't understand !-->
+
+    <!-- Google Fonts, syntax highlighting, favicon !-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Syntax highlighting !-->
-    <link href="/css/syntax.css" rel="stylesheet">
-    <!-- Fonts !-->
     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather&display=swap" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" sizes="32x32">
 </head>
