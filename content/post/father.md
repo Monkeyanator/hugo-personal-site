@@ -19,6 +19,6 @@ So I reached over and paused what you were watching
 (Recitations of The Scripture),    
 Took your glasses off    
 
-And sat fixed in downward gazes    
+And we sat fixed in downward gazes    
 Loving one another in silence    
 Until I in waking rendered you back to Paradise.    
