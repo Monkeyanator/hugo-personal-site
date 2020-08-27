@@ -4,7 +4,7 @@ title: father
 date: "2020-08-06"
 ---
 
-You had been four years in Paradise when I last saw you.      
+You had been four years in Paradise when I last saw you      
 Next to me in a restaurant    
 Occupied with your phone per usual.     
 
@@ -15,10 +15,10 @@ As you cannot throw a log onto a dying fire
 I couldn’t leap to hug you    
 Or bend to cry on your shirt    
 
-So I reached over and paused what you were watching    
+So I reached over to pause what you were watching    
 (Recitations of The Scripture),    
-Took your glasses off    
+And took your glasses off.    
 
-And we sat fixed in downward gazes    
+We sat fixed in downward gazes    
 Loving one another in silence    
-Until I in waking rendered you back to Paradise.    
+Until I, in waking, rendered you back to Paradise.    
