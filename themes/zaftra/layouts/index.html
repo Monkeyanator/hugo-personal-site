@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ range first 10 .Data.Pages }}
+    {{ range where .Site.RegularPages "Section" "post" }}
         {{ if eq .Type "post" }}
             <h2 class="index-post-listing">
                 <span class="index-post-date">{{ .PublishDate.Format "2006-01-02" }}</span>
