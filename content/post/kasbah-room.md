@@ -2,6 +2,7 @@
 layout: post
 title: the kasbah room 
 date: "2020-05-03"
+draft: true
 ---
 
 Cursed beneath a Southern star    
