@@ -16,13 +16,13 @@ So, I'm a slow learner. Tectonically slow. Sometimes it helps to keep track of t
 * Golang uses build tags to figure out which files to include in a given package. Looks like `// +build ...`. Can also use file suffixes like `platform_specific_code_linux.go` to accomplish this
 
 *Things I Learned I Need to Learn More About*
-* Don't understand how the *revision* field in the `IstioOperator` correlates to the `revision` field in Helm values
+* Don't understand how the `revision` field in the `IstioOperator` correlates to the `revision` field in Helm values
 * Don't understand why Envoy sets up listeners on `targetPort` for Gateways
 
 ## 1/6
 
 *Things I Learned*
-* Istio sets up _inbound_ listeners on `targetPort` since when the request reaches the proxy it will have already been translated by k8s networking layer! Makes sense, was thinking from outbound perspective where the listener should be on the `port`
+* Istio sets up `inbound` listeners on `targetPort` since when the request reaches the proxy it will have already been translated by k8s networking layer! Makes sense, was thinking from outbound perspective where the listener should be on the `port`
 * ValidationWebhook broken for Istio revisions in general because the chart exists in base and points to `/validate` on an `istiod` instance
 
 *Things I Learned I Need to Learn More About*
@@ -34,7 +34,6 @@ So, I'm a slow learner. Tectonically slow. Sometimes it helps to keep track of t
 *Things I Learned*
 * You can use `replace istio.io/api => /path/to/local/api/work` with go modules to replace dependencies with local versions (handy for `istio/api` experimentation, but cannot build in container without extra work)
 * Lots of things about how Istio translates from `IstioOperator` spec to Helm values (some things I wish I didn't know...)
-* There is both a `protocol` and `appProtocol` field on service ports, `protocol` refers to L4 protocol, `appProtocol` refers to L7 
 * `istioctl install --revision ...` is an alias for `istioctl install --set revision=...`
 * You can set `parallelism` on Kubernetes jobs to determine how many pods to run at any given time
 
