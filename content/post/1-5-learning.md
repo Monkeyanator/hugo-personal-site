@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 1/5/20 Learning Log
+title: learning log 1/5
 date: "2021-01-05"
 ---
 
