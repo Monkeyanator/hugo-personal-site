@@ -1,12 +1,6 @@
-[build]
-publish = "public"
-command = "hugo --gc --minify"
-
-[context.deploy-preview]
-command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.branch-deploy]
-command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+[build.environment]
+  HUGO_ENV = "production"
+  HUGO_VERSION = "0.64.0"
 
 [[plugins]]
 package = "netlify-plugin-image-optim"
