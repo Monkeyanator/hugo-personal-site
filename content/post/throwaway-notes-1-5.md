@@ -1,6 +1,6 @@
 ---
 layout: post
-title: learning log 1/5
+title: throwaway notes 1/5
 date: "2021-01-05"
 ---
 
