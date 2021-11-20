@@ -1,0 +1,3 @@
+[submodule "themes/zaftra"]
+	path = themes/zaftra
+	url = https://github.com/Monkeyanator/zaftra.git
