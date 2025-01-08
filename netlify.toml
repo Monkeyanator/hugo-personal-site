@@ -1,6 +1,6 @@
 [build.environment]
   HUGO_ENV = "production"
-  HUGO_VERSION = "0.64.0"
+  HUGO_VERSION = "0.140.2"
 
 [[plugins]]
 package = "netlify-plugin-image-optim"
