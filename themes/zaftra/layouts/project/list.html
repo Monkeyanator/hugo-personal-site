@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <h1> #contributor </h1>
+    <h1> open source </h1>
     {{ range .Data.Pages }}
         {{ if in .Params.tags "contributor" }}
             <div class="project-item">
@@ -12,7 +12,7 @@
         {{end }}
     {{ end }}
 
-    <h1> #creator </h1>
+    <h1> side projects </h1>
     {{ range .Data.Pages }}
         {{ if in .Params.tags "creator" }}
             <div class="project-item">
@@ -24,4 +24,14 @@
             </div>
         {{end }}
     {{ end }}
+
+    <h1> talks </h1>
+    {{ range site.Data.talks }}
+        <ul>
+            <li>
+                <a href={{ .url }}>{{ .name }}</a>
+            </li>
+        </ul>
+    {{ end }}
+
 {{ end }}

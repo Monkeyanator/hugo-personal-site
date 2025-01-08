@@ -10,7 +10,7 @@
     <title> {{ .Title }} </title>
     <!-- Compile SCSS and include !-->
     {{ $sass := resources.Get "sass/main.scss" }}
-    {{ $style := $sass | resources.ToCSS | minify }}
+    {{ $style := $sass | css.Sass | minify }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
     <!-- Google Fonts, syntax highlighting, favicon !-->

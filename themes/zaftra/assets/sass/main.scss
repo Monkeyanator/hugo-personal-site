@@ -23,7 +23,7 @@ img {
     padding-right: 10px;
 }
 
-blockquote {
+blockqote {
     // credit: https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
     background: $secondary-color;
     border-left: 4px solid #ccc;
@@ -39,6 +39,10 @@ hr {
     width:60%;
     text-align:left;
     margin: 10px;
+}
+
+ul {
+    margin: 2px;
 }
 
 /* chroma highlighting custom styles */
